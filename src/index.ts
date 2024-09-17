@@ -3,6 +3,22 @@ import prisma from "../prisma/prisma";
 const app = express();
 app.use(express.json());
 
+// Project description route
+app.get("/", (req, res) => {
+  res.json({
+    name: "Tesla Vehicles API",
+    description:
+      "A Node.js API to manage Tesla vehicles, including model, price, picture, and year of manufacture.",
+    routes: {
+      getAllVehicles: "GET /vehicles - Fetch all vehicles",
+      getVehicleById: "GET /vehicles/:id - Fetch a specific vehicle by ID",
+      createVehicle: "POST /vehicles - Create a new vehicle",
+      updateVehicle: "PUT /vehicles/:id - Update a specific vehicle by ID",
+      deleteVehicle: "DELETE /vehicles/:id - Delete a specific vehicle by ID",
+    },
+  });
+});
+
 // Get all vehicles
 app.get("/vehicles", async (req, res) => {
   try {
