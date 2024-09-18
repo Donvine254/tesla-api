@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
   res.json({
     name: "Tesla Vehicles API",
     description:
-      "A Node.js API to manage Tesla vehicles, including model, price, picture, and year of manufacture.",
+      "A Node.js API to manage Tesla vehicles, including model, price, picture, and year of manufacture. This project is a tutorial for using prisma to create a REST API",
     routes: {
       getAllVehicles: "GET /vehicles - Fetch all vehicles",
       getVehicleById: "GET /vehicles/:id - Fetch a specific vehicle by ID",
